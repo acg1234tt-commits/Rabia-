@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Rabia 🌙</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; overflow-x:hidden;
+  font-family:Georgia,'Times New Roman',serif;
+  color:#fff5f6;
+  background:linear-gradient(160deg,#100f2d,#392044,#783c60);
+  text-align:center;
+}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.star{
+  position:absolute;background:#fff5d7;border-radius:50%;
+  animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.15;transform:scale(.5)}}
+.moon{
+  width:100px;height:100px;border-radius:50%;
+  background:#fff0c7;
+  box-shadow:0 0 25px #ffe5b788,0 0 80px #ffdfb633;
+  margin:34px auto 24px;position:relative;
+  animation:float 4s ease-in-out infinite;
+}
+.moon:after{
+  content:"";position:absolute;left:29px;top:-8px;
+  width:100px;height:100px;border-radius:50%;
+  background:#201333;
+}
+@keyframes float{50%{transform:translateY(-10px)}}
+main{
+  position:relative;z-index:1;
+  width:min(92%,440px);margin:auto;padding:10px 0 45px;
+}
+.small{letter-spacing:3px;text-transform:uppercase;
+  font:10px Arial,sans-serif;color:#f8cddd}
+h1{font-size:clamp(30px,8vw,43px);font-weight:normal;
+  line-height:1.2;margin:12px 0}
+p{font-size:16px;line-height:1.9;color:#f9e8f0}
+.glow{color:#ffe2a9}
+.card{
+  margin:25px 0;padding:26px 20px;
+  background:#ffffff0d;border:1px solid #ffffff30;
+  border-radius:24px;box-shadow:0 15px 50px #0002;
+  backdrop-filter:blur(8px);
+}
+button{
+  border:0;border-radius:30px;padding:14px 22px;
+  background:#f8d5df;color:#4b243f;font-size:15px;
+  cursor:pointer;margin:12px 4px;
+  box-shadow:0 5px 22px #ffb9d333;
+}
+button:active{transform:scale(.97)}
+#letter{display:none;animation:appear 1s ease}
+@keyframes appear{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.petals{
+  position:fixed;top:-25px;z-index:0;pointer-events:none;
+  animation:fall linear forwards;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(500deg);opacity:0}
+}
+.heart{font-size:28px;animation:heartbeat 1.4s infinite}
+@keyframes heartbeat{50%{transform:scale(1.2)}}
+.footer{font:11px Arial,sans-serif;color:#e6bdcf;
+  letter-spacing:1px;margin-top:28px}
+</style>
+</head>
+
+<body>
+<div id="sky"></div>
+
+<main>
+  <div class="moon"></div>
+
+  <div class="small">a little place, just for you</div>
+  <h1>Aaj chaand ko<br><span class="glow">thoda aaraam chahiye 🌙</span></h1>
+
+  <p>
+    Meri Rabia… 🥹<br>
+    Har din ek jaisa nahi hota na?
+    Kuch din bas dil karta hai ki duniya
+    thodi dheemi ho jaaye aur koi bina poochhe
+    thoda sa extra pyaar de.
+  </p>
+
+  <div class="card">
+    <div class="heart">💌</div>
+    <p>
+      Mere paas aapke liye ek chhoti si chitthi hai…
+      <br>Isse kholne ke liye ready ho, meri jaan?
+    </p>
+    <button onclick="openLetter()">Chitthi kholo, Rabia 🤍</button>
+
+    <div id="letter">
+      <p>
+        Meri pyaari Rabia, ❤️
+      </p>
+      <p>
+        Agar aaj body thodi heavy lage,
+        energy kam ho ya bina kisi khaas wajah
+        ke bas aaraam karne ka mann kare…
+        toh khud ko force mat karna, okay?
+      </p>
+      <p>
+        Har waqt strong rehna zaroori nahi hota.
+        Kabhi bas blanket mein aaram se rehna,
+        kuch garam sa peena aur khud ko thoda
+        extra pyaar dena bhi zaroori hota hai. 🫂
+      </p>
+      <p>
+        Kaash main paas hota toh aapke liye
+        paani laata, aapka favourite kuch khilata,
+        aur aapko bina tang kiye aaraam karne deta…
+        <span class="glow"> (theek hai, thoda sa tang karta 😭❤️)</span>
+      </p>
+      <p>
+        Aapko kuch explain karne ki zaroorat nahi.
+        Baat karni ho toh main hoon,
+        chup rehna ho toh bhi main hoon.
+        Aaj bas apne saath thoda gentle rehna.
+      </p>
+      <p class="glow">
+        Aapko har din sab kuch sambhalna nahi hai,
+        meri jaan. Aaj khud ko bhi thoda sambhaal lena. 🌷
+      </p>
+
+      <button onclick="surprise()">Ek aakhri baat… 🥹</button>
+    </div>
+
+    <div id="last" style="display:none">
+      <p>
+        Pata hai Rabia? ❤️<br>
+        Main har baar aapki problem solve nahi kar sakta,
+        lekin aapko akela feel na ho,
+        iski koshish hamesha kar sakta hoon.
+      </p>
+      <h2 class="glow">I love you, meri Rasmalai. 🌙💗</h2>
+      <p>
+        Aaj apna khayal rakhna…
+        baaki pyaar meri taraf se unlimited hai. 🫶
+      </p>
+      <div class="heart">🫂💗</div>
+    </div>
+  </div>
+
+  <div class="footer">MADE WITH LOVE · ONLY FOR RABIA ✨</div>
+</main>
+
+<script>
+const sky=document.getElementById('sky');
+
+for(let i=0;i<65;i++){
+  const s=document.createElement('i');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.width=(Math.random()*3+1)+'px';
+  s.style.height=s.style.width;
+  s.style.animationDelay=Math.random()*3+'s';
+  sky.appendChild(s);
+}
+
+function petals(){
+  const p=document.createElement('div');
+  p.className='petals';
+  p.textContent=['🌸','🌷','✨','🤍'][Math.floor(Math.random()*4)];
+  p.style.left=Math.random()*100+'vw';
+  p.style.fontSize=(Math.random()*12+12)+'px';
+  p.style.animationDuration=(Math.random()*5+6)+'s';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),12000);
+}
+setInterval(petals,650);
+
+function openLetter(){
+  document.getElementById('letter').style.display='block';
+  document.querySelector('.card button').style.display='none';
+}
+function surprise(){
+  document.getElementById('last').style.display='block';
+  for(let i=0;i<20;i++)setTimeout(petals,i*100);
+  document.getElementById('last').scrollIntoView({
+    behavior:'smooth',block:'center'
+  });
+}
+</script>
+</body>
+</html>
